@@ -170,6 +170,7 @@ jobs:
           ARCHES_ROOT: "/web_root/arches"
           COMPRESS_OFFLINE: "False"
           COMPRESS_ENABLED: "False"
+          DEBUG: "True"
           INSTALL_DEFAULT_GRAPHS: "False"
           INSTALL_DEFAULT_CONCEPTS: "False"
           PGUSERNAME: "postgres"
@@ -258,6 +259,7 @@ jobs:
             ARCHES_DYNAMIC_IMAGE=${{ needs['Build-Arches'].outputs.image }}
             ARCHES_BASE=${{ env.ARCHES_BASE }}
             ARCHES_PROJECT=${{ env.ARCHES_PROJECT }}
+            DEBUG=True
       - name: Extract image name
         id: extract_image_name
         run: |
